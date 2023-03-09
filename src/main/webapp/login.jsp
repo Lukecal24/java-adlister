@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%--
-    JSP code to handle form submission
+    This will normally go in servlets
 --%>
 <%
     String username = request.getParameter("username");
@@ -26,6 +26,7 @@
     <title>Login Page</title>
 </head>
 <body>
+<%@ include file="/partials/navbar.jsp" %>
 <h1>Login</h1>
 <form method="post" action="login.jsp">
     <label for="username">Username:</label>
