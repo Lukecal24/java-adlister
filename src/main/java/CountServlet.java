@@ -4,7 +4,11 @@ import javax.servlet.http.HttpServlet;
 public class CountServlet extends HttpServlet {
     public static int count = 0;
         public void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
-            count++;
+            String reset = request.getParameter("reset");
+            if(reset != null) {
+                count = 0;
+            }
             response.getWriter().println("<h1>The current count is: " + count + "</h1>");
+            count++;
         }
 }
