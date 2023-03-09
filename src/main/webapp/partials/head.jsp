@@ -11,6 +11,7 @@
     <title>Head</title>
 </head>
 <body>
+<header>This is the header</header>
 
 </body>
 </html>
