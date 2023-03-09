@@ -6,11 +6,42 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--
+    JSP code to handle form submission
+--%>
+<%
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+
+    if (username != null && password != null && username.equals("admin") && password.equals("password")) {
+        // credentials are correct, redirect to profile page
+        response.sendRedirect("profile.jsp");
+    } else if (username != null || password != null) {
+        // credentials are incorrect, show error message
+        out.println("<p style=\"color:red;\">Invalid username or password. Please try again.</p>");
+    }
+%>
 <html>
 <head>
-    <title>Login</title>
+    <title>Login Page</title>
 </head>
 <body>
-<h1>Hello zenith!</h1>
+<h1>Login</h1>
+<form method="post" action="login.jsp">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>
+
+
+
+
+
+
+

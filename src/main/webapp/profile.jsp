@@ -11,6 +11,7 @@
     <title>Profile</title>
 </head>
 <body>
-
+<h1>Welcome to your profile</h1>
+<p>You have successfully logged in.</p>
 </body>
 </html>
