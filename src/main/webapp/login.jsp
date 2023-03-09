@@ -14,10 +14,8 @@
     String password = request.getParameter("password");
 
     if (username != null && password != null && username.equals("admin") && password.equals("password")) {
-        // credentials are correct, redirect to profile page
         response.sendRedirect("profile.jsp");
     } else if (username != null || password != null) {
-        // credentials are incorrect, show error message
         out.println("<p style=\"color:red;\">Invalid username or password. Please try again.</p>");
     }
 %>
