@@ -1,7 +1,7 @@
 public class Quote {
     private int id;
     private String text;
-    private String author;
+    private Author author;
 
 //Getter and setter
 
@@ -21,11 +21,11 @@ public class Quote {
         this.text = text;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
@@ -35,7 +35,7 @@ public class Quote {
     public Quote() {
     }
 
-    public Quote(int id, String text, String author) {
+    public Quote(int id, String text, Author author) {
         this.id = id;
         this.text = text;
         this.author = author;
