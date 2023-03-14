@@ -13,14 +13,14 @@
 </head>
 <body>
 <h1>List of Ads</h1>
-<ul>
-    <c:forEach items="${ads}" var="ad">
-        <li>
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
-        </li>
-    </c:forEach>
-</ul>
+    <ul>
+        <c:forEach items="${ads}" var="ad">
+            <li>
+                <h2>${ad.title}</h2>
+                <p>${ad.description}</p>
+            </li>
+        </c:forEach>
+    </ul>
 </body>
 </html>
 
